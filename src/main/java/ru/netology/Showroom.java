@@ -11,7 +11,7 @@ public class Showroom {
         return seller.sellCar();
     }
 
-    public void acceptCar() {
+    public void createCar() {
         seller.createCar();
     }
 

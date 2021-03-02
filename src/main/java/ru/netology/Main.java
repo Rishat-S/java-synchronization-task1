@@ -3,10 +3,17 @@ package ru.netology;
 public class Main {
 
     public static void main(String[] args) {
-       Showroom showroom = new Showroom();
+        Showroom showroom = new Showroom();
+        int count = 0;
 
-       new Thread(showroom::sellCar, "Customer").start();
+        while (true) {
+            count++;
+            new Thread(showroom::sellCar, "Customer" + count).start();
+            new Thread(showroom::createCar, "Manufacturer" + count).start();
 
-       new Thread(showroom::acceptCar, "Manufacturer").start();
+            if (count == 10) {
+                break;
+            }
+        }
     }
 }
