@@ -33,7 +33,7 @@ public class Manufacturer {
             TimeUnit.SECONDS.sleep(ACCEPTANCE_OF_CAR);
             showroom.getCars().add(new Car());
             System.out.println(Thread.currentThread().getName() + ": Car created.");
-            notify();
+            notifyAll();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
