@@ -24,7 +24,6 @@ public class Manufacturer {
             e.printStackTrace();
         }
         return showroom.getCars().remove(0); // FIXME:
-
     }
 
     public synchronized void createCar() {
