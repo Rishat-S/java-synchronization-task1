@@ -23,7 +23,7 @@ public class Manufacturer {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return showroom.getCars().remove(0); // FIXME:
+        return showroom.getCars().remove(showroom.size() - 1);
     }
 
     public synchronized void createCar() {
