@@ -6,13 +6,10 @@ public class Main {
         Showroom showroom = new Showroom();
         int count = 0;
 
-        while (true) {
+        do {
             count++;
             new Thread(showroom::sellCar, "Customer" + count).start();
             new Thread(showroom::createCar, "Manufacturer" + count).start();
-            if (count == 10) {
-                break;
-            }
-        }
+        } while (count != 10);
     }
 }
